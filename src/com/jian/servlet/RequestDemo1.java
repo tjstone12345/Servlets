@@ -32,6 +32,9 @@ public class RequestDemo1 extends HttpServlet {
 	
 	public void test3(HttpServletRequest request, HttpServletResponse response) throws FileNotFoundException, IOException {
 		
+	   this.getServletConfig().getServletContext();
+		
+		
 		Enumeration e = this.getInitParameterNames();
 		while(e.hasMoreElements()){
 			String name = (String) e.nextElement();
