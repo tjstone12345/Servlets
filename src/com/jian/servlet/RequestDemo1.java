@@ -7,10 +7,8 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,11 +29,8 @@ public class RequestDemo1 extends HttpServlet {
 	}
 	
 	public void test3(HttpServletRequest request, HttpServletResponse response) throws FileNotFoundException, IOException {
-		
-	   this.getServletConfig().getServletContext();
-		
-		
-		Enumeration e = this.getInitParameterNames();
+	
+		Enumeration<String> e = this.getInitParameterNames();
 		while(e.hasMoreElements()){
 			String name = (String) e.nextElement();
 			String value = this.getInitParameter(name);
@@ -66,7 +61,7 @@ public class RequestDemo1 extends HttpServlet {
 	        "<tr bgcolor=\"#949494\">\n" +
 	        "<th>Header Name</th><th>Header Value(s)</th>\n"+
 	        "</tr>\n"); 
-	      Enumeration headerNames = request.getHeaderNames();      
+	      Enumeration<String> headerNames = request.getHeaderNames();      
 	      while(headerNames.hasMoreElements()) {
 	         String paramName = (String)headerNames.nextElement();
 	         out.print("<tr><td>" + paramName + "</td>\n");
@@ -79,7 +74,7 @@ public class RequestDemo1 extends HttpServlet {
 
 
 	public void test1(HttpServletResponse response) throws FileNotFoundException, IOException {
-		String data = "aaaaaBBBBBBBBCCDCC";
+		//String data = "aaaaaBBBBBBBBCCDCC";
 		
 		ServletContext cont = getServletContext();
 		String str = cont.getRealPath("1.jpeg");
