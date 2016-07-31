@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Check out</title>
 </head>
 <body>
- <font color="red">
-  <a> This is a test </a>
- </font>
+   <a href="/Servlets/SessionDemo1">购买</a>
+   <a href="/Servlets/SessionDemo2">结账</a> 
 </body>
 </html>
