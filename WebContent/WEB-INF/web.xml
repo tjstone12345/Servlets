@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <servlet>
     <servlet-name>servletDemo1</servlet-name>
-    <servlet-class>com.jian.servlet.servletDemo1</servlet-class>
+    <servlet-class>com.jian.servlet.ServletDemo1</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>RequestDemo1</servlet-name>
@@ -25,7 +25,7 @@
     </init-param>
   </servlet>
   <servlet-mapping>
-    <servlet-name>servletDemo1</servlet-name>
+    <servlet-name>ServletDemo1</servlet-name>
     <url-pattern>/servletDemo1</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
